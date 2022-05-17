@@ -36,7 +36,7 @@ export default function Map() {
         }
       });
 
-    const mapRef = useRef<GoogleMap>();
+    const mapRef = useRef<google.maps.Map>();
     const center = useMemo<LatLngLiteral>(() => ({lat: 29.425319, lng: -98.492733}), []);
 
     const options = useMemo<MapOptions>(() => ({
@@ -48,7 +48,7 @@ export default function Map() {
         mapTypeId: 'hybrid',
         draggableCursor: 'crosshair',
     }), []);
-    const onLoad = useCallback((map) => (mapRef.current = map), []);
+    const onLoad = useCallback((map: google.maps.Map) => (mapRef.current = map), []);
 
     const dotIcon = {
         url: "https://www.wsfcu.com/wp-content/uploads/Decorative-Orange-Box-Slider.jpg",
@@ -76,7 +76,7 @@ export default function Map() {
                 geodesic: false,
                 strokeColor: "#FF0000",
             });
-            newPolyline.setMap(mapRef.current);
+            newPolyline.setMap(mapRef.current!);
             // newPolyline.addListener('click', () => {newPolyline.setMap(null);})
             currPolyline.current = newPolyline;            
         } else {
@@ -102,7 +102,7 @@ export default function Map() {
             position: points,
             icon: dotIcon
         });
-        point.setMap(mapRef.current);
+        point.setMap(mapRef.current!);
     }
 
     class roofPanel{
@@ -122,7 +122,7 @@ export default function Map() {
                 fillColor: "#FF0000",
                 fillOpacity: 0.35,
             });
-            panel.setMap(mapRef.current);
+            panel.setMap(mapRef.current!);
             panel.addListener('click', () => {
                 this.delete();
             });
@@ -168,12 +168,12 @@ export default function Map() {
             }
 
             //Draws blue line over side with largest y component (for debugging)
-            const maxLineDrawing = new google.maps.Polyline({
-                path: maxLine,
-                geodesic: false,
-                strokeColor: "#0000FF",
-            });
-            maxLineDrawing.setMap(mapRef.current);
+            // const maxLineDrawing = new google.maps.Polyline({
+            //     path: maxLine,
+            //     geodesic: false,
+            //     strokeColor: "#0000FF",
+            // });
+            // maxLineDrawing.setMap(mapRef.current!);
 
             //2. Identify nothmost point on line----------------------------------
             let northMost: LatLngLiteral;
@@ -287,7 +287,7 @@ export default function Map() {
                         newSolarPanel.addListener('mouseover', () => {setPanelHovering(this.index);});
                         newSolarPanel.addListener('mouseout', () => {setPanelHovering(undefined);});
                         this.solarPanels.push(newSolarPanel);
-                        this.solarPanels[this.solarPanels.length-1].setMap(mapRef.current);
+                        this.solarPanels[this.solarPanels.length-1].setMap(mapRef.current!);
                     }
 
                     if(anyPointWithinRoofPanelWest){
@@ -325,7 +325,7 @@ export default function Map() {
                         newSolarPanel.addListener('mouseover', () => {setPanelHovering(this.index);});
                         newSolarPanel.addListener('mouseout', () => {setPanelHovering(undefined);});
                         this.solarPanels.push(newSolarPanel);
-                        this.solarPanels[this.solarPanels.length-1].setMap(mapRef.current);
+                        this.solarPanels[this.solarPanels.length-1].setMap(mapRef.current!);
                     }
 
                     if(anyPointWithinRoofPanelEast){
@@ -349,9 +349,9 @@ export default function Map() {
 
         addBack(){
             this.isDeleted = false;
-            this.panel.setMap(mapRef.current);
+            this.panel.setMap(mapRef.current!);
             this.solarPanels.map((panel) => {
-                panel.setMap(mapRef.current);
+                panel.setMap(mapRef.current!);
             });
             setDeletedPanels(deletedPanels => deletedPanels.filter(item => item !== this.index));
         }
@@ -463,7 +463,7 @@ export default function Map() {
                     options={options}
                     onLoad={onLoad}
                     onClick={(e) => {
-                        addBoxPoint(e.latLng?.toJSON());
+                        addBoxPoint(e.latLng?.toJSON()!);
                     }}
                 >
                     {boxPoints.length > 0 && boxPoints.map((coordinates, index) => (
