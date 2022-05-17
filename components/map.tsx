@@ -408,7 +408,7 @@ export default function Map() {
                                 {panel.points.length === 3 && <p>Panels: <span className="bold">{panel.solarPanels.length} solar panels</span></p>}
                                 <button 
                                     className="delete_button"
-                                    onClick={() => {
+                                    onClick={(e) => {
                                         panel.delete();
                                     }}
                                 >
