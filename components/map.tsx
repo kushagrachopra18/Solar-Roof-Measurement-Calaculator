@@ -34,7 +34,7 @@ export default function Map() {
         if(home){
             setZoom(100);
         }
-      });
+      }, [home]);
 
     const mapRef = useRef<google.maps.Map>();
     const center = useMemo<LatLngLiteral>(() => ({lat: 29.425319, lng: -98.492733}), []);
