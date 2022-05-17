@@ -392,7 +392,7 @@ export default function Map() {
                     <p className="deleted_panels_description">Click to add panel back:</p>
                     <div className="deleted_panels_inner_container">
                         {deletedPanels && deletedPanels.map((panelIndex) => {
-                            return <button className="deleted_panels_button" onClick={(e) => {
+                            return <button key={panelIndex} className="deleted_panels_button" onClick={(e) => {
                                 roofPanels[panelIndex].addBack();
                             }}>{panelIndex+1}</button>
                         })}
@@ -468,6 +468,7 @@ export default function Map() {
                 >
                     {boxPoints.length > 0 && boxPoints.map((coordinates, index) => (
                             <Marker
+                            key={index}
                             position={coordinates}
                             icon={dotIcon}
                             onClick={(e) => {
