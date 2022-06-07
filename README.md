@@ -1,3 +1,9 @@
+## App deployed here: https://roof-measurement-calaculator-gieetdjrk-kushagrachopra18.vercel.app/
+*Note If you are reading this after August 2022, it's likely that the deployed version of the app doesn't work anymore since my free trial to the Google Maps API has ended. Feel free to check out the video below to see how it works!
+
+## Video demo of the app: https://www.youtube.com/watch?v=3I8DnJDj9s4
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
