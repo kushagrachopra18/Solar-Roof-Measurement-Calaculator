@@ -17,7 +17,7 @@ A tool to measure your roof and tell you how much of your home’s energy consum
 2. Highlight each south, east, and west facing panel of your roof by (for each panel):
     1. Click all of the corners of the roof panel to outline it
     2. Click the original point you placed to complete the highlight
-    3. Repat for remaining panels
+    3. Repeat for remaining panels
 3. Enter your home's monthly energy consumption in the summary section
 4. View summary to figure out how much of your home's energy consumption you can offset with solar panels, how many solar panels yu can fit, and how much energy that will generate per month
 
