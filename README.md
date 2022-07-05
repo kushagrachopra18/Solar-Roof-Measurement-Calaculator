@@ -8,17 +8,6 @@ A tool to measure your roof and tell you how much of your home’s energy consum
 
 **Video demo of the app:** https://www.youtube.com/watch?v=3I8DnJDj9s4
 
-## Screenshots
-
-<img src="public/panel_packing_screenshot.png" alt="Getting started" width="300"/>
-*Solar panel packing algorithm*
-
-<img src="public/search_feature_screenshot.png" alt="Getting started" width="300"/>
-*Address search feature*
-
-<img src="public/summary_screenshot.png" alt="Getting started" width="300"/>
-*Summary section*
-
 ## How to use
 *Also shown in video above*
 
@@ -37,3 +26,14 @@ A tool to measure your roof and tell you how much of your home’s energy consum
     2. Clicking the delete button on the corresponding block in the "Drawn Panels" section
 - Add panels back by clicking the corresponding number in the "Click to add panel back:" section
 - Identify panel number by hovering over panel and looking towards the top of the screen for the "Currently hovering over" popup
+
+## Screenshots
+
+*Solar panel packing algorithm*
+<img src="public/panel_packing_screenshot.png" alt="Getting started" width="400"/>
+
+*Address search feature*
+<img src="public/search_feature_screenshot.png" alt="Getting started" width="300"/>
+
+*Summary section*
+<img src="public/summary_screenshot.png" alt="Getting started" width="300"/>
