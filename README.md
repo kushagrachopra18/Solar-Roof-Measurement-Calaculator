@@ -19,9 +19,9 @@ A tool to measure your roof and tell you how much of your home’s energy consum
     2. Click the original point you placed to complete the highlight
     3. Repeat for remaining panels
 3. Enter your home's monthly energy consumption in the summary section
-4. View summary to figure out how much of your home's energy consumption you can offset with solar panels, how many solar panels yu can fit, and how much energy that will generate per month
+4. View summary to figure out how much of your home's energy consumption you can offset with solar panels, how many solar panels you can fit, and how much energy that will generate per month
 
-**Miscilaneous Features**
+**Miscellaneous Features**
 - Delete panels by either:
     1. Clicking on them
     2. Clicking the delete button on the corresponding block in the "Drawn Panels" section
