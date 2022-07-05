@@ -30,10 +30,13 @@ A tool to measure your roof and tell you how much of your home’s energy consum
 ## Screenshots
 
 *Solar panel packing algorithm*
+
 <img src="public/panel_packing_screenshot.png" alt="Getting started" width="400"/>
 
 *Address search feature*
+
 <img src="public/search_feature_screenshot.png" alt="Getting started" width="300"/>
 
 *Summary section*
+
 <img src="public/summary_screenshot.png" alt="Getting started" width="300"/>
